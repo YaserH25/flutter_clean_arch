@@ -1,7 +1,8 @@
 import 'package:flutter_clean_arch/features/posts/domain/entities/post.dart';
 
 class PostModel extends Post {
-  PostModel({required super.id, required super.title, required super.body});
+  PostModel({int? id, required String title, required String body})
+      : super(id: id, title: title, body: body);
 
   factory PostModel.fromJson(Map<String, dynamic> json) {
     return PostModel(id: json['id'], title: json['title'], body: json['body']);
